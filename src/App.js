@@ -1,4 +1,6 @@
 import './App.css';
+import Post from './components/Post';
+import "./assets/fonts/SFPRODISPLAYREGULAR.OTF"
 
 function App() {
   return (
@@ -10,10 +12,8 @@ function App() {
           alt='Instgaram Logo'
         />
       </div>
-      {/* Header */}
 
-      {/* Posts */}
-      {/* Posts */}
+      <Post />
     </div>
   );
 }
