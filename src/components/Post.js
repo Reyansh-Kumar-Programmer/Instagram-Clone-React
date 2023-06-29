@@ -2,21 +2,21 @@ import React from 'react'
 import './Post.css'
 import { Avatar } from '@mui/material'
 
-function Post() {
+function Post({ username, caption, imageUrl }) {
   return (
     <div className='post'>
       <div className='post__header'>
         <Avatar
           className='post__avatar'
-          alt="ReyanshKumar"
+          alt={username}
           src="/static/images/avatar/1.jpg"
         />
-        <h3 className='username'>Username</h3>
+        <h3 className='username'>{username}</h3>
       </div>
 
-      <img className='post__image' src='https://www.vanilla-noir.com/static/bc08342f6d2157e9b267996403be42c7/acebf/react-3.png' alt='post__bg' />
+      <img className='post__image' src={imageUrl} alt='post__bg' />
       
-      <h4 className='post__text'><strong>ReyanshProProgrammer:</strong> WOW day three of live sessions</h4>
+      <h4 className='post__text'><strong>{username}:</strong> {caption}</h4>
     </div>
   )
 }
